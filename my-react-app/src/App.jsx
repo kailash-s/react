@@ -26,13 +26,23 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Header from "./components/Header";
 
+// components can also be on same page like below but first word needs to be in caps so it differs from a function
+export const InternalComponent = () => {
+  return <p>text</p>
+}
+
 function App() {
+  const random = Math.random();
+
   return (
     <>
     <Navbar/>
     {/* <!-- Hero --> */}
     <Hero title="Test Title" subtitle="Subtitle"/>
+    <Header random={random} />
     <Header />
+    <InternalComponent/>
+    {random}
     </>
   );
 }
