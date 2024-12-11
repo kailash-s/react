@@ -32,17 +32,14 @@ export const InternalComponent = () => {
 }
 
 function App() {
-  const random = Math.random();
 
   return (
     <>
     <Navbar/>
     {/* <!-- Hero --> */}
     <Hero title="Test Title" subtitle="Subtitle"/>
-    <Header random={random} />
-    <Header />
+    <Header {...{ name: "Harry" }} />
     <InternalComponent/>
-    {random}
     </>
   );
 }

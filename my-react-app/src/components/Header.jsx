@@ -1,10 +1,10 @@
 import Menu from "./Menu"
 
-export default function Header(props) {
-  const random = props.random;
+export default function Header({
+  name
+}) {
   return <header>
-      <p>Header coming from components</p>
-      <Menu/>
-      <p>Random number: {random}</p>
+    <Menu {...{ name }}/>
+    {name}
   </header>
 }
