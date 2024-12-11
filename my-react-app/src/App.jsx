@@ -31,6 +31,18 @@ export const InternalComponent = () => {
   return <p>text</p>
 }
 
+const Menu = ({
+  name
+}) => {
+  return <div className="bg-red-500">
+    <span>This menu is for {name}</span>
+    <ul>
+      <li>Home</li>
+      <li>Profile</li>
+    </ul>
+  </div>
+};
+
 function App() {
 
   return (
@@ -38,7 +50,10 @@ function App() {
     <Navbar/>
     {/* <!-- Hero --> */}
     <Hero title="Test Title" subtitle="Subtitle"/>
-    <Header {...{ name: "Harry" }} />
+    <Header>
+      {/* children helps compose components by embedding other components inside elements within a parent component */}
+      <Menu {...{ name: "Harry" }}/>
+    </Header>
     <InternalComponent/>
     </>
   );

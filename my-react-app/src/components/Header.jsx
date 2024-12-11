@@ -1,10 +1,12 @@
 import Menu from "./Menu"
 
 export default function Header({
-  name
+  children
 }) {
   return <header>
-    <Menu {...{ name }}/>
-    {name}
+    <div>this is my header</div>
+    <div className="bg-yellow-500 p-4">
+      {children}
+    </div>
   </header>
 }
